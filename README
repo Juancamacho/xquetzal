@@ -1,0 +1,8 @@
+To create ./configure script file run:
+
+aclocal
+autoconf
+
+Then use:
+
+./configure
