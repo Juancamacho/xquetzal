@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<GTK-Interface>
+
+<project>
+  <name>ollin</name>
+  <program_name>ollin</program_name>
+  <directory></directory>
+  <source_directory>src</source_directory>
+  <pixmaps_directory>pixmaps</pixmaps_directory>
+  <language>C</language>
+  <gnome_support>False</gnome_support>
+  <gettext_support>False</gettext_support>
+</project>
+
+<widget>
+  <class>GtkWindow</class>
+  <name>windowPrincipal</name>
+  <signal>
+    <name>delete_event</name>
+    <handler>on_windowPrincipal_delete_event</handler>
+    <last_modification_time>Wed, 07 Jan 2004 23:10:36 GMT</last_modification_time>
+  </signal>
+  <title>window1</title>
+  <type>GTK_WINDOW_TOPLEVEL</type>
+  <position>GTK_WIN_POS_NONE</position>
+  <modal>False</modal>
+  <allow_shrink>False</allow_shrink>
+  <allow_grow>True</allow_grow>
+  <auto_shrink>False</auto_shrink>
+
+  <widget>
+    <class>GtkDrawingArea</class>
+    <name>drawingareaPrincipal</name>
+  </widget>
+</widget>
+
+</GTK-Interface>
