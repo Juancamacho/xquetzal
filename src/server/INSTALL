@@ -1,0 +1,72 @@
+INSTALL xitris-server.
+
+OVERVIEW 
+
+xitris-server is part of a set program. Thogether can get, store,
+display and publicate data in real time. xitris-server get the data
+from analog data stream and some analog digital convertor board transform
+into digital data. Xquetzal listen to resolve get actions from xitris-client
+program.
+
+FEATURES
+
+ADC board Configuration in real time (xitris-server get support to LabPC+ by 
+National Instruments).
+
+Pre-configured frecuency convertion times. (10s, 5s, 2s, 1s, 0.5s, 0.01s, 0.001s.
+
+Resolve services to get data from analog source.
+
+REQUERIMENTS
+ 166 MHz Clock Processor.
+ 46 MB Ram. 
+ 12 Gb HDD.
+ ISA port.
+ Ethernet 100MBPS
+ GNU/Linux Debian (Potatoe) or compatible.
+ LabPC+ By National Instruments in ISA port.
+
+INSTALL
+
+Modify the file:
+
+	server/xitris-server/i_addr.h
+
+You need the server network configuration:
+
+	#define PUERTO_SERVIDOR_TCP 7000
+	#define PUERTO_SERVIDOR_UDP 7000
+	#define DIRECCION_NODO_SERVIDOR "192.168.1.4"
+
+Next, you type:
+
+	make
+
+and (as root):
+
+	make install
+
+
+USE
+
+Only type:
+
+	nohup xitris-server &
+
+This create a deamon.
+
+
+FAQ:
+
+How restart the service?.
+ps aux
+(see the PID number)
+kill PID
+nohup server&
+(Sorry but we don't implement the interface)
+
+
+BUGS:
+
+Report any bug to:
+	itztli@gmail.com
